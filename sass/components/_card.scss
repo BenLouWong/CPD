@@ -1,0 +1,54 @@
+.card02 {
+	background-color: $font-colour-tertiary;
+	border-radius: 2rem;
+	flex-direction: column;
+	padding: 2rem;
+	font-size: $font-small;
+	font-family: "Comic Neue", cursive;
+	box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease-in-out;
+	backface-visibility: hidden;
+
+	@include respond(phone) {
+		padding: 1.2rem;
+		border-radius: 0.5rem;
+	}
+
+	&__container {
+		&--img {
+			width: 6rem;
+			height: 6rem;
+
+			@include respond(phone) {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+		&--text {
+			padding-top: 1.5rem;
+
+			@include respond(phone) {
+				font-size: $font-very-small;
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+
+	&:hover {
+		transform: scale(1.03);
+		box-shadow: 8px 8px 22px rgba(0, 0, 0, 0.15);
+	}
+
+	&__last {
+		@include respond(tab-landscape) {
+			display: none;
+		}
+		@include respond(tab-port) {
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.section {
+	&__faq {
+		flex-direction: column;
+		@include respond(tab-landscape) {
+			padding-top: 6rem;
+		}
+
+		@include respond(phone) {
+			padding-top: 3rem;
+		}
+	}
+}
+
+.faq {
+	&__left {
+		justify-self: center;
+		align-self: center;
+	}
+	&__right {
+		background-image: url(../../images/faq.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: auto;
+		height: 28rem;
+
+		@include respond(tab-landscape) {
+			display: none;
+		}
+	}
+	&__textbox {
+		&--heading {
+			color: $font-colour-secondary;
+		}
+	}
+}

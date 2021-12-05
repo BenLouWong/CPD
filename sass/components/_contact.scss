@@ -1,0 +1,93 @@
+.contact {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.23s ease-in;
+
+	&__blurb {
+		font-size: $font-small;
+	}
+
+	&__left {
+		@include respond(phone) {
+			width: 80%;
+			padding: 1rem;
+			font-size: $font-very-small;
+		}
+
+		align-self: start;
+		justify-self: start;
+		padding: 2rem;
+		background-color: white;
+		height: auto;
+	}
+
+	&__Menu {
+		color: black;
+		padding: 2rem;
+		background-color: $colour-blue-pale;
+		align-self: start;
+		justify-self: center;
+
+		height: 100%;
+		width: 100%;
+		padding-left: 1rem;
+
+		@include respond(tab-port) {
+			display: none;
+		}
+	}
+	&__form {
+		position: fixed;
+		z-index: 100;
+		background-color: rgba(45, 45, 45, 0.7);
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		&--cont {
+			background-color: white;
+			// margin: 2rem;
+			width: 60%;
+			height: auto;
+			position: relative;
+		}
+		&--menu {
+			width: inherit;
+			flex-direction: column;
+			margin-bottom: 0.7rem;
+
+			&--input {
+				padding-left: 1rem;
+				height: 2rem;
+				border: none;
+				box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+			}
+			&--message {
+				border: none;
+				box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+
+				font-family: sans-serif;
+				padding: 1rem;
+			}
+		}
+	}
+	&__close {
+		color: $font-colour-primary;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0.6rem;
+		border: none;
+		cursor: pointer;
+		background: transparent;
+		font-size: $font-med;
+	}
+	&__active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.contactEmail {
+	max-width: 80%;
+}

@@ -1,0 +1,71 @@
+.hero {
+	&__slider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		z-index: 5;
+	}
+
+	&__slides {
+		width: 500%;
+		display: flex;
+		overflow: hidden;
+	}
+
+	&__slide {
+		width: 20%;
+		height: 100vh;
+		transition: 1s ease;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&--01 {
+			// background-position: bottom;
+			background-image: url(../../images/hero.jpg);
+		}
+		&--02 {
+			background-image: url(../../images/hero_slider02.webp);
+		}
+		&--03 {
+			background-image: url(../../images/surgeryEntrance.jpeg);
+		}
+		&--04 {
+			background-image: url(../../images/surgery.jpeg);
+		}
+
+		& img {
+			filter: brightness(0.7) blur(1px);
+			width: 100%;
+			height: auto;
+
+			@include respond(tab-landscape) {
+				width: auto;
+				height: 100%;
+			}
+		}
+	}
+
+	input {
+		display: none;
+	}
+}
+
+#radio1:checked ~ .slide01 {
+	margin-left: 0;
+}
+
+#radio2:checked ~ .slide01 {
+	margin-left: -20%;
+}
+
+#radio3:checked ~ .slide01 {
+	margin-left: -40%;
+}
+
+#radio4:checked ~ .slide01 {
+	margin-left: -60%;
+}

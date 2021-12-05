@@ -1,0 +1,68 @@
+.section {
+	&__footer {
+		flex-direction: column;
+		background-color: $colour-blue-pale;
+		color: $font-colour-footer;
+		font-weight: 700;
+		padding: 2rem 8rem;
+
+		&--column {
+			justify-self: center;
+			align-self: center;
+		}
+
+		&--column04 {
+			align-self: start;
+		}
+
+		&--content {
+			display: flex;
+			align-items: center;
+			padding: 0.3rem 0;
+			font-size: $font-small;
+			font-family: "Comic Neue", cursive;
+			// color: #0c4b7a;
+		}
+
+		&--icon {
+			display: flex;
+			align-items: center;
+			padding: 0 0.6rem 0 0;
+			color: $font-colour-secondary;
+
+			&-04 {
+				font-size: 1.5rem;
+				padding: 0 0.6rem 0 0;
+				color: $font-colour-secondary;
+			}
+		}
+
+		&--link {
+			display: flex;
+			justify-content: center;
+			font-family: sans-serif;
+			font-size: $font-very-small;
+			margin: 0.5rem;
+			text-decoration: none;
+			color: $font-colour-primary;
+		}
+	}
+}
+
+.footer {
+	&__credits {
+		text-align: center;
+		background-color: $colour-footer;
+		color: $font-colour-tertiary;
+		padding: 0.7rem;
+		font-size: $font-small;
+		& a {
+			color: $font-colour-tertiary;
+			text-decoration: none;
+		}
+
+		@include respond(phone) {
+			font-size: $font-very-small;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.section {
+	&__FAQ {
+		background-image: url(../../images/hero-team.jpg);
+		background-size: cover;
+		background-position: bottom;
+		overflow: hidden;
+		height: 80vh;
+
+		&--container {
+			flex-direction: column;
+			color: $font-colour-tertiary;
+		}
+	}
+}

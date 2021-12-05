@@ -1,0 +1,32 @@
+.section {
+	&__info04 {
+		z-index: 5;
+		// grid-template-columns: 30% auto;
+
+		@include respond(small-desktop) {
+			grid-template-columns: 100%;
+		}
+
+		&--text {
+			align-self: center;
+			justify-self: center;
+		}
+		& a {
+			text-decoration: none;
+		}
+		&--btn {
+			justify-content: flex-start;
+			align-items: flex-start;
+
+			@include respond(phone) {
+				display: none;
+			}
+
+			&-wrapper {
+				@include respond(small-desktop) {
+					display: none;
+				}
+			}
+		}
+	}
+}

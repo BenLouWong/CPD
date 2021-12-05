@@ -1,0 +1,21 @@
+.section {
+	&__about {
+		justify-content: center;
+		&--01 {
+			padding-left: 2rem;
+
+			@include respond(tab-landscape) {
+				padding: 0;
+			}
+		}
+
+		&--btn {
+			margin-left: -0.5rem;
+		}
+		&--heading {
+			display: flex;
+			align-items: center;
+			justify-self: center;
+		}
+	}
+}
