@@ -19,6 +19,11 @@
 
 		margin-right: 2rem;
 
+		& img {
+			height: 100%;
+			width: auto;
+		}
+
 		@include respond(tab-landscape) {
 			height: auto;
 		}
